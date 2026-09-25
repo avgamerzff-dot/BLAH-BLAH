@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Something Special 💖</title>
+
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: #4a2430;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+.page {
+    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   PAGE 1 — VERIFICATION
+===================================================== */
+
+#page1 {
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,255,255,.55),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(255,255,255,.4),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffd6e0,
+            #f7b2c4,
+            #e9a8d0
+        );
+}
+
+
+.card {
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 34px 26px;
+
+    background: rgba(255,255,255,.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.7);
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(105,36,69,.18),
+        0 5px 20px rgba(105,36,69,.08);
+
+    animation: cardAppear .8s ease forwards;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+.lock-emoji {
+
+    width: 74px;
+    height: 74px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7da8,
+            #c85a96
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+
+    box-shadow:
+        0 10px 25px rgba(200,90,150,.3);
+
+    animation:
+        float 3s ease-in-out infinite;
+}
+
+
+.card h1 {
+
+    font-size:
+        clamp(28px,8vw,38px);
+
+    margin-bottom: 8px;
+
+    color: #57243c;
+}
+
+
+.subtitle {
+
+    color: #8d5a6d;
+
+    font-size: 15px;
+
+    margin-bottom: 28px;
+}
+
+
+.input-group {
+
+    text-align: left;
+
+    margin-bottom: 17px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin: 0 0 8px 5px;
+
+    color: #663047;
+}
+
+
+.input-wrapper {
+
+    position: relative;
+}
+
+
+.input-wrapper span {
+
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    font-size: 19px;
+
+    pointer-events: none;
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    height: 56px;
+
+    border:
+        2px solid #f1c4d4;
+
+    border-radius: 17px;
+
+    outline: none;
+
+    padding:
+        0 15px 0 47px;
+
+    font-size: 16px;
+
+    color: #522b3b;
+
+    background:
+        rgba(255,255,255,.8);
+
+    transition: .25s ease;
+}
+
+
+.input-group input:focus {
+
+    border-color: #d86c9b;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(216,108,155,.12);
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.primary-btn {
+
+    width: 100%;
+
+    min-height: 56px;
+
+    border: none;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6f9f,
+            #c95c99
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 22px
+        rgba(201,92,153,.3);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 14px 28px
+        rgba(201,92,153,.38);
+}
+
+
+.primary-btn:active {
+
+    transform:
+        scale(.97);
+}
+
+
+.error-message {
+
+    min-height: 24px;
+
+    margin-top: 17px;
+
+    color: #d04d76;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.shake {
+
+    animation:
+        shake .45s ease;
+}
+
+
+/* =====================================================
+   PAGE 2 — BIRTHDAY
+===================================================== */
+
+#page2 {
+
+    background:
+
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255,255,255,.7),
+            transparent 20%
+        ),
+
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(255,220,245,.55),
+            transparent 22%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255,180,215,.45),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #ffcedd,
+            #eeb9e9,
+            #bca9f5
+        );
+
+    text-align: center;
+}
+
+
+.birthday-content {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.birthday-small {
+
+    font-size:
+        clamp(18px,5vw,25px);
+
+    font-weight: 700;
+
+    color: #733d67;
+
+    animation:
+        revealText .8s ease;
+}
+
+
+.birthday-title {
+
+    font-size:
+        clamp(42px,12vw,75px);
+
+    line-height: 1.05;
+
+    margin: 12px 0 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9d356f,
+            #df4f89,
+            #7545a6
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        titleReveal 1s ease;
+}
+
+
+.birthday-message {
+
+    font-size:
+        clamp(19px,5vw,26px);
+
+    line-height: 1.5;
+
+    color: #633653;
+
+    font-weight: 700;
+}
+
+
+.surprise-box {
+
+    margin-top: 38px;
+
+    padding: 24px 18px;
+
+    border-radius: 27px;
+
+    background:
+        rgba(255,255,255,.46);
+
+    border:
+        1px solid rgba(255,255,255,.6);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(90,46,100,.12);
+}
+
+
+.surprise-question {
+
+    font-size:
+        clamp(18px,5vw,23px);
+
+    font-weight: 800;
+
+    color: #633653;
+
+    margin-bottom: 19px;
+}
+
+
+.choice-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 11px;
+}
+
+
+.choice-btn {
+
+    border: none;
+
+    min-height: 52px;
+
+    padding: 12px 20px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    color: #693653;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px
+        rgba(90,46,100,.12);
+
+    transition: .2s ease;
+}
+
+
+.choice-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.02);
+}
+
+
+.choice-btn:active {
+
+    transform:
+        scale(.94);
+}
+
+
+/* =====================================================
+   MEDIA PAGES
+===================================================== */
+
+#memePage,
+#surprise1Page,
+#surprise2Page,
+#surprise3Page {
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.65),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffd6e0,
+            #eeb9e9,
+            #c6b5f5
+        );
+}
+
+
+.media-container {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,.76);
+
+    backdrop-filter:
+        blur(15px);
+
+    -webkit-backdrop-filter:
+        blur(15px);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(80,40,90,.15);
+
+    animation:
+        cardAppear .7s ease;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.media-title {
+
+    font-size:
+        clamp(23px,6vw,30px);
+
+    color: #673653;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   ALL VIDEOS
+===================================================== */
+
+.surprise-video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 65vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    margin:
+        0 auto 22px;
+
+    background: #000;
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* =====================================================
+   SURPRISE IMAGE
+===================================================== */
+
+.surprise-image {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 65vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    margin:
+        0 auto 22px;
+
+    background: white;
+}
+
+
+/* =====================================================
+   SURPRISE SELECTION
+===================================================== */
+
+#surprisePage {
+
+    background:
+
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255,255,255,.6),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(255,255,255,.5),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            145deg,
+            #ffd4e2,
+            #eab7e8,
+            #b9acf4
+        );
+
+    text-align: center;
+}
+
+
+.selection-container {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.selection-container h1 {
+
+    font-size:
+        clamp(30px,8vw,45px);
+
+    color: #673653;
+
+    margin-bottom: 10px;
+}
+
+
+.selection-container p {
+
+    color: #80506e;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+.bear-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 13px;
+}
+
+
+.bear-card {
+
+    min-height: 170px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.75);
+
+    box-shadow:
+        0 12px 30px
+        rgba(80,40,90,.13);
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: .25s ease;
+
+    color: #633653;
+}
+
+
+.bear-card:hover {
+
+    transform:
+        translateY(-7px)
+        scale(1.03);
+
+    box-shadow:
+        0 18px 35px
+        rgba(80,40,90,.2);
+}
+
+
+.bear-card:active {
+
+    transform:
+        scale(.95);
+}
+
+
+.bear {
+
+    font-size: 65px;
+
+    animation:
+        float 3s ease-in-out infinite;
+}
+
+
+.bear-card:nth-child(2) .bear {
+
+    animation-delay: .4s;
+}
+
+
+.bear-card:nth-child(3) .bear {
+
+    animation-delay: .8s;
+}
+
+
+.bear-title {
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   BALLOONS
+===================================================== */
+
+.balloon {
+
+    position: absolute;
+
+    width: 55px;
+    height: 70px;
+
+    border-radius:
+        50% 50% 45% 45%;
+
+    opacity: .75;
+
+    animation:
+        balloonFloat
+        5s ease-in-out infinite;
+
+    z-index: 1;
+}
+
+
+.balloon::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 80px;
+
+    background:
+        rgba(100,70,100,.3);
+
+    left: 50%;
+
+    top: 68px;
+}
+
+
+.balloon-1 {
+
+    left: 4%;
+    top: 14%;
+
+    background: #ff8fb3;
+}
+
+
+.balloon-2 {
+
+    right: 5%;
+    top: 18%;
+
+    background: #a990ed;
+
+    animation-delay: 1s;
+}
+
+
+.balloon-3 {
+
+    left: 8%;
+    bottom: 12%;
+
+    background: #ffb86c;
+
+    animation-delay: 2s;
+}
+
+
+.balloon-4 {
+
+    right: 8%;
+    bottom: 10%;
+
+    background: #8bd9d0;
+
+    animation-delay: 1.5s;
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti {
+
+    position: fixed;
+
+    width: 9px;
+    height: 14px;
+
+    top: -20px;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(.96);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes float {
+
+    0%,100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+@keyframes shake {
+
+    0%,100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-8px);
+    }
+
+    40% {
+        transform: translateX(8px);
+    }
+
+    60% {
+        transform: translateX(-6px);
+    }
+
+    80% {
+        transform: translateX(6px);
+    }
+}
+
+
+@keyframes revealText {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes titleReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.65)
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+@keyframes balloonFloat {
+
+    0%,100% {
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50% {
+
+        transform:
+            translateY(-18px)
+            rotate(4deg);
+    }
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(-20px)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .page {
+        padding: 18px;
+    }
+
+    .bear-grid {
+        gap: 9px;
+    }
+
+    .bear-card {
+
+        min-height: 145px;
+
+        border-radius: 20px;
+    }
+
+    .bear {
+        font-size: 50px;
+    }
+
+    .bear-title {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .bear-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bear-card {
+
+        min-height: 120px;
+
+        flex-direction: row;
+
+        justify-content: center;
+    }
+
+    .bear {
+        font-size: 45px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PAGE 1 — VERIFICATION
+===================================================== -->
+
+<section
+    id="page1"
+    class="page"
+>
+
+    <div
+        class="card"
+        id="verificationCard"
+    >
+
+        <div class="lock-emoji">
+            👀
+        </div>
+
+
+        <h1>
+            Who are you? 👀
+        </h1>
+
+
+        <p class="subtitle">
+            Hmm... let's see if you're the birthday girl ✨
+        </p>
+
+
+        <form
+            id="verificationForm"
+            autocomplete="off"
+        >
+
+            <div class="input-group">
+
+                <label for="name">
+                    Name
+                </label>
+
+
+                <div class="input-wrapper">
+
+                    <span>👤</span>
+
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="dob">
+                    Date of Birth
+                </label>
+
+
+                <div class="input-wrapper">
+
+                    <span>🎂</span>
+
+
+                    <input
+                        type="date"
+                        id="dob"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-btn"
+            >
+                Enter ✨
+            </button>
+
+
+            <div
+                id="errorMessage"
+                class="error-message"
+            ></div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2 — BIRTHDAY
+===================================================== -->
+
+<section
+    id="page2"
+    class="page hidden"
+>
+
+    <div class="balloon balloon-1"></div>
+
+    <div class="balloon balloon-2"></div>
+
+    <div class="balloon balloon-3"></div>
+
+    <div class="balloon balloon-4"></div>
+
+
+    <main class="birthday-content">
+
+        <p class="birthday-small">
+            Hey hey! 👀✨
+        </p>
+
+
+        <h1 class="birthday-title">
+
+            It's your<br>
+            birthday! 🎂
+
+        </h1>
+
+
+        <p class="birthday-message">
+
+            Wishing you a very, very<br>
+            Happy Birthday! 💖🎉
+
+        </p>
+
+
+        <div class="surprise-box">
+
+            <p class="surprise-question">
+
+                Are you ready for the surprise? 👀🎁
+
+            </p>
+
+
+            <div class="choice-buttons">
+
+                <button
+                    type="button"
+                    class="choice-btn"
+                    id="yesButton"
+                >
+                    Yes 💖
+                </button>
+
+
+                <button
+                    type="button"
+                    class="choice-btn"
+                    id="noButton"
+                >
+                    No 🙈
+                </button>
+
+
+                <button
+                    type="button"
+                    class="choice-btn"
+                    id="obviouslyButton"
+                >
+                    Obviously 😎
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEME PAGE — meme.mp4
+===================================================== -->
+
+<section
+    id="memePage"
+    class="page hidden"
+>
+
+    <div class="media-container">
+
+        <h2 class="media-title">
+            Oh... so you chose NO? 😭
+        </h2>
+
+
+        <video
+            id="memeVideo"
+            class="surprise-video"
+            autoplay
+            loop
+            playsinline
+            preload="auto"
+        >
+
+            <source
+                src="./meme.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support this video.
+
+        </video>
+
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="memeBackButton"
+        >
+            Go Back 💖
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SURPRISE SELECTION
+===================================================== -->
+
+<section
+    id="surprisePage"
+    class="page hidden"
+>
+
+    <div class="balloon balloon-1"></div>
+
+    <div class="balloon balloon-2"></div>
+
+
+    <div class="selection-container">
+
+        <h1>
+            Choose Your Surprise 🎁
+        </h1>
+
+
+        <p>
+            Three little surprises are waiting for you... 👀💖
+        </p>
+
+
+        <div class="bear-grid">
+
+
+            <!-- SURPRISE 1 -->
+
+            <button
+                type="button"
+                class="bear-card"
+                id="surprise1Button"
+            >
+
+                <span class="bear">
+                    🐻
+                </span>
+
+
+                <span class="bear-title">
+                    Surprise 1
+                </span>
+
+            </button>
+
+
+
+            <!-- SURPRISE 2 -->
+
+            <button
+                type="button"
+                class="bear-card"
+                id="surprise2Button"
+            >
+
+                <span class="bear">
+                    🐻
+                </span>
+
+
+                <span class="bear-title">
+                    Surprise 2
+                </span>
+
+            </button>
+
+
+
+            <!-- SURPRISE 3 -->
+
+            <button
+                type="button"
+                class="bear-card"
+                id="surprise3Button"
+            >
+
+                <span class="bear">
+                    🐻
+                </span>
+
+
+                <span class="bear-title">
+                    Surprise 3
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SURPRISE 1 — VIDEO
+===================================================== -->
+
+<section
+    id="surprise1Page"
+    class="page hidden"
+>
+
+    <div class="media-container">
+
+        <h2 class="media-title">
+            Surprise 1 🎁💖
+        </h2>
+
+
+        <video
+            id="surprise1Video"
+            class="surprise-video"
+            autoplay
+            loop
+            playsinline
+            preload="auto"
+        >
+
+            <source
+                src="./surprise1.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support this video.
+
+        </video>
+
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="surprise1Back"
+        >
+            Go Back 💖
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SURPRISE 2 — IMAGE
+===================================================== -->
+
+<section
+    id="surprise2Page"
+    class="page hidden"
+>
+
+    <div class="media-container">
+
+        <h2 class="media-title">
+            Surprise 2 🎁💖
+        </h2>
+
+
+        <img
+            src="./surprise2.jpg"
+            alt="Surprise 2"
+            class="surprise-image"
+        >
+
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="surprise2Back"
+        >
+            Go Back 💖
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SURPRISE 3 — VIDEO
+===================================================== -->
+
+<section
+    id="surprise3Page"
+    class="page hidden"
+>
+
+    <div class="media-container">
+
+        <h2 class="media-title">
+            Surprise 3 🎁💖
+        </h2>
+
+
+        <video
+            id="surprise3Video"
+            class="surprise-video"
+            autoplay
+            loop
+            playsinline
+            preload="auto"
+        >
+
+            <source
+                src="./surprise3.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support this video.
+
+        </video>
+
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="surprise3Back"
+        >
+            Go Back 💖
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+
+/* =====================================================
+   BIRTHDAY INFORMATION
+===================================================== */
+
+const CORRECT_NAME =
+    "ritika gupta";
+
+const CORRECT_DOB =
+    "2008-09-26";
+
+
+/* =====================================================
+   PAGES
+===================================================== */
+
+const page1 =
+    document.getElementById(
+        "page1"
+    );
+
+const page2 =
+    document.getElementById(
+        "page2"
+    );
+
+const memePage =
+    document.getElementById(
+        "memePage"
+    );
+
+const surprisePage =
+    document.getElementById(
+        "surprisePage"
+    );
+
+const surprise1Page =
+    document.getElementById(
+        "surprise1Page"
+    );
+
+const surprise2Page =
+    document.getElementById(
+        "surprise2Page"
+    );
+
+const surprise3Page =
+    document.getElementById(
+        "surprise3Page"
+    );
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+const verificationForm =
+    document.getElementById(
+        "verificationForm"
+    );
+
+const nameInput =
+    document.getElementById(
+        "name"
+    );
+
+const dobInput =
+    document.getElementById(
+        "dob"
+    );
+
+const errorMessage =
+    document.getElementById(
+        "errorMessage"
+    );
+
+const verificationCard =
+    document.getElementById(
+        "verificationCard"
+    );
+
+
+/* =====================================================
+   VIDEOS
+===================================================== */
+
+const memeVideo =
+    document.getElementById(
+        "memeVideo"
+    );
+
+const surprise1Video =
+    document.getElementById(
+        "surprise1Video"
+    );
+
+const surprise3Video =
+    document.getElementById(
+        "surprise3Video"
+    );
+
+
+/* =====================================================
+   HIDE ALL PAGES
+===================================================== */
+
+function hideAllPages() {
+
+    page1.classList.add(
+        "hidden"
+    );
+
+    page2.classList.add(
+        "hidden"
+    );
+
+    memePage.classList.add(
+        "hidden"
+    );
+
+    surprisePage.classList.add(
+        "hidden"
+    );
+
+    surprise1Page.classList.add(
+        "hidden"
+    );
+
+    surprise2Page.classList.add(
+        "hidden"
+    );
+
+    surprise3Page.classList.add(
+        "hidden"
+    );
+
+}
+
+
+/* =====================================================
+   VERIFICATION
+===================================================== */
+
+verificationForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const enteredName =
+            nameInput.value
+            .trim()
+            .toLowerCase();
+
+
+        const enteredDOB =
+            dobInput.value;
+
+
+        const nameCorrect =
+            enteredName ===
+            CORRECT_NAME;
+
+
+        const dobCorrect =
+            enteredDOB ===
+            CORRECT_DOB;
+
+
+        if (
+            nameCorrect &&
+            dobCorrect
+        ) {
+
+            showBirthdayPage();
+
+        }
+
+        else {
+
+            showError();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+
+function showError() {
+
+    errorMessage.textContent =
+        "Hmm... I don't think you're the birthday girl 👀";
+
+
+    verificationCard.classList.remove(
+        "shake"
+    );
+
+
+    void verificationCard.offsetWidth;
+
+
+    verificationCard.classList.add(
+        "shake"
+    );
+
+
+    setTimeout(
+        function() {
+
+            verificationCard.classList.remove(
+                "shake"
+            );
+
+        },
+        500
+    );
+
+}
+
+
+/* =====================================================
+   PAGE 1 → PAGE 2
+===================================================== */
+
+function showBirthdayPage() {
+
+    page1.style.transition =
+        "opacity .7s ease, transform .7s ease";
+
+
+    page1.style.opacity =
+        "0";
+
+
+    page1.style.transform =
+        "scale(1.04)";
+
+
+    setTimeout(
+        function() {
+
+            hideAllPages();
+
+
+            page2.classList.remove(
+                "hidden"
+            );
+
+
+            page2.style.opacity =
+                "0";
+
+
+            page2.style.transform =
+                "scale(.98)";
+
+
+            requestAnimationFrame(
+                function() {
+
+                    page2.style.transition =
+                        "opacity .7s ease, transform .7s ease";
+
+
+                    page2.style.opacity =
+                        "1";
+
+
+                    page2.style.transform =
+                        "scale(1)";
+
+                }
+            );
+
+
+            createConfetti();
+
+        },
+        650
+    );
+
+}
+
+
+/* =====================================================
+   NO → MEME VIDEO
+===================================================== */
+
+document
+    .getElementById(
+        "noButton"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            hideAllPages();
+
+
+            memePage.classList.remove(
+                "hidden"
+            );
+
+
+            memeVideo.currentTime =
+                0;
+
+
+            memeVideo.muted =
+                false;
+
+
+            memeVideo.volume =
+                1;
+
+
+            memeVideo.play()
+                .catch(
+                    function() {}
+                );
+
+        }
+    );
+
+
+/* =====================================================
+   MEME → BIRTHDAY
+===================================================== */
+
+document
+    .getElementById(
+        "memeBackButton"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            memeVideo.pause();
+
+
+            memeVideo.currentTime =
+                0;
+
+
+            hideAllPages();
+
+
+            page2.classList.remove(
+                "hidden"
+            );
+
+        }
+    );
+
+
+/* =====================================================
+   YES → SURPRISE SELECTION
+===================================================== */
+
+document
+    .getElementById(
+        "yesButton"
+    )
+    .addEventListener(
+        "click",
+        showSurprises
+    );
+
+
+/* =====================================================
+   OBVIOUSLY → SURPRISE SELECTION
+===================================================== */
+
+document
+    .getElementById(
+        "obviouslyButton"
+    )
+    .addEventListener(
+        "click",
+        showSurprises
+    );
+
+
+/* =====================================================
+   SURPRISE SELECTION
+===================================================== */
+
+function showSurprises() {
+
+    hideAllPages();
+
+
+    surprisePage.classList.remove(
+        "hidden"
+    );
+
+
+    createConfetti();
+
+}
+
+
+/* =====================================================
+   SURPRISE 1 → VIDEO
+===================================================== */
+
+document
+    .getElementById(
+        "surprise1Button"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            hideAllPages();
+
+
+            surprise1Page.classList.remove(
+                "hidden"
+            );
+
+
+            surprise1Video.currentTime =
+                0;
+
+
+            surprise1Video.muted =
+                false;
+
+
+            surprise1Video.volume =
+                1;
+
+
+            surprise1Video.play()
+                .catch(
+                    function() {}
+                );
+
+        }
+    );
+
+
+/* =====================================================
+   SURPRISE 2 → IMAGE
+===================================================== */
+
+document
+    .getElementById(
+        "surprise2Button"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            hideAllPages();
+
+
+            surprise2Page.classList.remove(
+                "hidden"
+            );
+
+        }
+    );
+
+
+/* =====================================================
+   SURPRISE 3 → VIDEO
+===================================================== */
+
+document
+    .getElementById(
+        "surprise3Button"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            hideAllPages();
+
+
+            surprise3Page.classList.remove(
+                "hidden"
+            );
+
+
+            surprise3Video.currentTime =
+                0;
+
+
+            surprise3Video.muted =
+                false;
+
+
+            surprise3Video.volume =
+                1;
+
+
+            surprise3Video.play()
+                .catch(
+                    function() {}
+                );
+
+        }
+    );
+
+
+/* =====================================================
+   SURPRISE 1 → BACK
+===================================================== */
+
+document
+    .getElementById(
+        "surprise1Back"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            surprise1Video.pause();
+
+
+            surprise1Video.currentTime =
+                0;
+
+
+            showSurprises();
+
+        }
+    );
+
+
+/* =====================================================
+   SURPRISE 2 → BACK
+===================================================== */
+
+document
+    .getElementById(
+        "surprise2Back"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            showSurprises();
+
+        }
+    );
+
+
+/* =====================================================
+   SURPRISE 3 → BACK
+===================================================== */
+
+document
+    .getElementById(
+        "surprise3Back"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            surprise3Video.pause();
+
+
+            surprise3Video.currentTime =
+                0;
+
+
+            showSurprises();
+
+        }
+    );
+
+
+/* =====================================================
+   EXTRA LOOP PROTECTION — MEME
+===================================================== */
+
+memeVideo.addEventListener(
+    "ended",
+    function() {
+
+        this.currentTime =
+            0;
+
+        this.play()
+            .catch(
+                function() {}
+            );
+
+    }
+);
+
+
+/* =====================================================
+   EXTRA LOOP PROTECTION — SURPRISE 1
+===================================================== */
+
+surprise1Video.addEventListener(
+    "ended",
+    function() {
+
+        this.currentTime =
+            0;
+
+        this.play()
+            .catch(
+                function() {}
+            );
+
+    }
+);
+
+
+/* =====================================================
+   EXTRA LOOP PROTECTION — SURPRISE 3
+===================================================== */
+
+surprise3Video.addEventListener(
+    "ended",
+    function() {
+
+        this.currentTime =
+            0;
+
+        this.play()
+            .catch(
+                function() {}
+            );
+
+    }
+);
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti() {
+
+    const confettiCount =
+        90;
+
+
+    for (
+        let i = 0;
+        i < confettiCount;
+        i++
+    ) {
+
+        const confetti =
+            document.createElement(
+                "div"
+            );
+
+
+        confetti.classList.add(
+            "confetti"
+        );
+
+
+        confetti.style.left =
+            Math.random() *
+            100 +
+            "vw";
+
+
+        const size =
+            Math.random() *
+            6 +
+            6;
+
+
+        confetti.style.width =
+            size +
+            "px";
+
+
+        confetti.style.height =
+            size * 1.5 +
+            "px";
+
+
+        confetti.style.borderRadius =
+            Math.random() > .5
+            ? "50%"
+            : "2px";
+
+
+        const duration =
+            Math.random() *
+            2.5 +
+            2.5;
+
+
+        confetti.style.animationDuration =
+            duration +
+            "s";
+
+
+        confetti.style.animationDelay =
+            Math.random() *
+            1.5 +
+            "s";
+
+
+        document.body.appendChild(
+            confetti
+        );
+
+
+        setTimeout(
+            function() {
+
+                confetti.remove();
+
+            },
+            (duration + 2) *
+            1000
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
